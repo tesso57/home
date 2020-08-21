@@ -1,6 +1,6 @@
 <template>
   <li @click="onClick">
-    <div>{{ name }}</div>
+    <div class="item">{{ name }}</div>
   </li>
 </template>
 
@@ -35,4 +35,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.item {
+  font-size: 34px;
+  cursor: pointer;
+}
+.item:hover {
+  background: rgba(103, 56, 103, 0.99);
+}
+</style>

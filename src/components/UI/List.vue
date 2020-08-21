@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="menu">
     <list-item
       v-for="item in items"
       :key="item.name"
@@ -34,4 +34,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.menu {
+  margin: 0;
+  padding: 0;
+  background: #e7981c;
+  color: #3a3a3a;
+  height: 100%;
+  width: 286px;
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+}
+
+</style>

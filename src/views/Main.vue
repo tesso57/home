@@ -1,27 +1,20 @@
 <template>
-  <div>
-    <p>HOME</p>
+  <Menu />
+  <div class="contents">
     <p>{{ title }}</p>
-    <!--    <ul>-->
-    <!--      <li><router-link to="/">HOME</router-link></li>-->
-    <!--      <li><router-link to="/about">ABOUT</router-link></li>-->
-    <!--      <li><router-link to="/works">WORKS</router-link></li>-->
-    <!--      <li><router-link to="/contact">CONTACT</router-link></li>-->
-    <!--    </ul>-->
-    <List></List>
+    ここにものが来る
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from "vue";
-import List from "@/components/UI/List.vue";
-
+import Menu from "@/components/UI/Menu.vue";
 type RouteName = "home" | "about" | "works" | "contact";
 
 export default defineComponent({
   name: "Main",
   components: {
-    List
+    Menu
   },
   props: {
     type: {
@@ -42,4 +35,18 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.contents {
+  background: #eee;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: 286px;
+}
+</style>
