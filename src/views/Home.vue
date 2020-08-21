@@ -2,7 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-    <MyButton buttonName="Hello World"></MyButton>
+    <MyButton></MyButton>
+    <parent-component></parent-component>
   </div>
 </template>
 
@@ -10,12 +11,13 @@
 import { defineComponent } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import MyButton from "@/components/MyButton.vue";
-
+import parentComponent from "@/components/parentComponent.vue";
 export default defineComponent({
   name: "Home",
   components: {
     HelloWorld,
-    MyButton
+    MyButton,
+    parentComponent
   }
 });
 </script>

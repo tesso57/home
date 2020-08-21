@@ -1,21 +1,39 @@
 <template>
-  <button @click="onClick">{{ buttonName }}</button>
+  <!--  <button @click="onClick">{{ buttonName }}</button>-->
+  <div>
+    <h2>{{ state.greet }}</h2>
+    <h2>{{ greetref }}</h2>
+    <button @click="onClick">おして</button>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive, ref } from "vue";
+
+type Props = {
+  message: string;
+};
 
 export default defineComponent({
   name: "Mybutton",
   props: {
-    buttonName: String
+    message: {
+      type: String,
+      default: "default Value"
+    }
   },
-  setup(props) {
+  setup(props: Props) {
+    props.message;
+    const state = reactive<{ greet: string }>({
+      greet: "Hello World"
+    });
+    const greetref = ref<string>("こんにちは");
     const onClick = () => {
-      alert(props.buttonName);
+      alert(state.greet);
+      // props.buttonName = "こんにちは世界";
     };
 
-    return { onClick };
+    return { state, greetref, onClick };
   }
 });
 </script>
