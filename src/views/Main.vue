@@ -1,5 +1,7 @@
 <template>
-MAIN VIEW
+<div>
+HELLO
+</div>
 </template>
 
 <script lang="ts">

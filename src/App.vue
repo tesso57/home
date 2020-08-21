@@ -1,7 +1,6 @@
 <template>
   <router-view />
 </template>
-<script lang="ts"></script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
