@@ -1,0 +1,38 @@
+<template>
+  <li @click="onClick">
+    <div>{{ name }}</div>
+  </li>
+</template>
+
+<script lang="ts">
+import { defineComponent, computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
+export default defineComponent({
+  name: "ListItem",
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    path: {
+      type: String,
+      required: true
+    }
+  },
+  setup(props) {
+    const router = useRouter();
+    const route = useRoute();
+
+    const isSelected = computed(() => route.path === props.path);
+
+    const onClick = () => {
+      router.push(props.path);
+    };
+
+    return { isSelected, onClick };
+  }
+});
+</script>
+
+<style scoped></style>
