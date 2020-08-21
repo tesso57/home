@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
-export enum RoutName {
+export enum RouteName {
   HOME = "home",
   ABOUT = "about",
   WORKS = "works",
@@ -13,24 +13,27 @@ const routes: Array<RouteRecordRaw> = [
   // which is lazy-loaded when the route is visited.
   {
     path: "/",
-    name: RoutName.HOME,
-
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue")
+    name: RouteName.HOME,
+    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    props: { type: RouteName.HOME }
   },
   {
     path: "/about",
-    name: RoutName.ABOUT,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue")
+    name: RouteName.ABOUT,
+    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    props: { type: RouteName.ABOUT }
   },
   {
     path: "/works",
-    name: RoutName.WORKS,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue")
+    name: RouteName.WORKS,
+    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    props: { type: RouteName.WORKS }
   },
   {
     path: "/contact",
-    name: RoutName.CONTACT,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue")
+    name: RouteName.CONTACT,
+    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    props: { type: RouteName.CONTACT }
   }
 ];
 
