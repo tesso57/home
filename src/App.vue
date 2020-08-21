@@ -1,25 +1,41 @@
+<!--全体の整形-->
+
 <template>
-  <router-view />
+  <div class="container">
+    <Menu class="navigation" />
+    <main class="content"><router-view /></main>
+  </div>
 </template>
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import Menu from "@/components/UI/Menu.vue";
+export default defineComponent({
+  name: "App",
+  components: {
+    Menu
+  }
+});
+</script>
+
+<style scoped>
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+
+  grid-template-areas: "nav content";
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: 286px 1fr;
 }
 
-#nav {
-  padding: 30px;
+.navigation {
+  grid-area: nav;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.content {
+  grid-area: content;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <Menu />
+<!--  <Menu />-->
   <div class="contents">
     <p>{{ title }}</p>
     ここにものが来る
@@ -14,7 +14,7 @@ type RouteName = "home" | "about" | "works" | "contact";
 export default defineComponent({
   name: "Main",
   components: {
-    Menu
+    // Menu
   },
   props: {
     type: {
@@ -43,10 +43,6 @@ body {
   height: 100%;
 }
 .contents {
-  background: #eee;
-  height: 100%;
-  padding: 0;
-  box-sizing: border-box;
-  margin-left: 286px;
+  text-align: center;
 }
 </style>
