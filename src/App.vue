@@ -18,14 +18,20 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .container {
   display: grid;
   height: 100%;
   width: 100%;
 
   grid-template-areas: "nav content";
-  grid-template-rows: min-content 1fr;
   grid-template-columns: 286px 1fr;
 }
 
@@ -34,8 +40,13 @@ export default defineComponent({
 }
 
 .content {
+  height: 100%;
   grid-area: content;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: scroll; /*下手な空白をいれない*/
+}
+
+#app {
+  height: 100%;
 }
 </style>

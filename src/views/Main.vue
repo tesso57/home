@@ -1,8 +1,13 @@
 <template>
-<!--  <Menu />-->
-  <div class="contents">
-    <p>{{ title }}</p>
+  <!--  <Menu />-->
+  <div class="main-content">
+    <div>
+      {{ title }} <!--そのうち線を引く-->
+    </div>
     ここにものが来る
+    <div>
+      <img src="../assets/logo.png" /> <!--アイコンの代わり-->
+    </div>
   </div>
 </template>
 
@@ -34,15 +39,11 @@ export default defineComponent({
   }
 });
 </script>
-
 <style scoped>
-html,
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-.contents {
+.main-content {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 </style>

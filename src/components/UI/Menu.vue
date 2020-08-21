@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="menu">
     <list />
   </div>
 </template>
@@ -17,7 +17,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.container {
+.menu {
   height: 100%;
+  color: #3a3a3a;
+  width: 286px;
+  background: #e7981c;
+  margin: 0;
+  padding: 0;
 }
 </style>
