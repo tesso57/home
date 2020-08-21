@@ -1,24 +1,28 @@
-# homepage
+#home
+tessoの自己紹介用ホームページ
 
-## Project setup
-```
-npm install
-```
+## design
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+イメージ
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Figma：[link](https://www.figma.com/file/KIjtjTL5GXFYjt8HNabpp9/Mypage-v1?node-id=5%3A29)
 
-### Lints and fixes files
-```
-npm run lint
-```
+- HOME
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![HOME](design/HOME.png)
+
+- ABOUT
+
+![ABOUT](design/ABOUT.png)
+
+- WORKS
+
+![WORKS](design/WORKS.png)
+
+- CONTACT
+
+![CONTACT](design/CONTACT.png)
+
+## 実装言語
+
+vue 3.0
