@@ -2,13 +2,13 @@
   <!--  <button @click="onClick">{{ buttonName }}</button>-->
   <div>
     <h2>{{ state.greet }}</h2>
-    <h2>{{ greetref }}</h2>
-    <button @click="onClick">おして</button>
+    <button @click="changeMessage('引数')">おして</button>
+    <button @click="onClick">alert</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
+import { defineComponent, reactive, SetupContext } from "vue";
 
 type Props = {
   message: string;
@@ -22,18 +22,25 @@ export default defineComponent({
       default: "default Value"
     }
   },
-  setup(props: Props) {
-    props.message;
+  setup(props: Props, context: SetupContext) {
     const state = reactive<{ greet: string }>({
       greet: "Hello World"
     });
-    const greetref = ref<string>("こんにちは");
+
+    const changeMessage = (message: string) => {
+      state.greet = message;
+    };
+
     const onClick = () => {
       alert(state.greet);
       // props.buttonName = "こんにちは世界";
     };
 
-    return { state, greetref, onClick };
+    return {
+      state,
+      onClick,
+      changeMessage
+    };
   }
 });
 </script>
