@@ -1,5 +1,5 @@
 <template>
-  <button>{{ buttonName }}</button>
+  <button @click="onClick">{{ buttonName }}</button>
 </template>
 
 <script lang="ts">
@@ -9,6 +9,13 @@ export default defineComponent({
   name: "Mybutton",
   props: {
     buttonName: String
+  },
+  setup(props) {
+    const onClick = () => {
+      alert(props.buttonName);
+    };
+
+    return { onClick };
   }
 });
 </script>
