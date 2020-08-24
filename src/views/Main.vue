@@ -1,26 +1,24 @@
 <template>
-  <!--  <Menu />-->
   <div class="main-content">
     <div>
-      {{ title }} <!--そのうち線を引く-->
+      {{ title }}
+      <!--そのうち線を引く-->
     </div>
     ここにものが来る
     <div>
-      <img src="../assets/logo.png" /> <!--アイコンの代わり-->
+      <img src="../assets/logo.png" />
+      <!--アイコンの代わり-->
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from "vue";
-import Menu from "@/components/UI/Menu.vue";
 type RouteName = "home" | "about" | "works" | "contact";
 
 export default defineComponent({
   name: "Main",
-  components: {
-    // Menu
-  },
+  components: {},
   props: {
     type: {
       type: String as PropType<RouteName>,

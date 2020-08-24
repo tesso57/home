@@ -1,6 +1,7 @@
 <template>
   <li @click="onClick">
-    <div class="item">{{ name }}</div>
+    <div v-show="isSelected" class="item-share item-selected">{{ name }}</div>
+    <div v-show="!isSelected" class="item-share item">{{ name }}</div>
   </li>
 </template>
 
@@ -25,7 +26,6 @@ export default defineComponent({
     const route = useRoute();
 
     const isSelected = computed(() => route.path === props.path);
-
     const onClick = () => {
       router.push(props.path);
     };
@@ -38,18 +38,35 @@ export default defineComponent({
 <style scoped>
 li {
   margin: 0;
-  padding-left: 36px;
+  padding-left: 76px;
   list-style: none;
+  height: 20%;
 }
+.item-share {
+  font-family: "Do Hyeon", sans-serif;
+  color: #3a3a3a;
+  text-align: right;
+
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 80px 0 0 80px/100% 0 0 100%;
+}
+
 .item {
   font-size: 34px;
-  cursor: pointer;
-  text-align: right;
-  padding-right: 20px;
-  border: none;
-  border-radius: 50px 0 0 50px/100% 0 0 100%;
+  color: #3a3a3a;
+}
+.item-selected {
+  font-size: 45px;
+  background: #e7981c;
 }
 .item:hover {
-  background: rgba(103, 56, 103, 0.99);
+  background: #b39f78;
+  font-size: 45px;
+  //padding-right: 40px;
 }
 </style>

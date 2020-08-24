@@ -19,6 +19,8 @@ export default defineComponent({
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
 html,
 body {
   margin: 0;

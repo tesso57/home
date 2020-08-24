@@ -24,10 +24,10 @@ export default defineComponent({
   },
   setup() {
     const items: Item[] = [
-      { name: "home", path: "/" },
-      { name: "about", path: "/about" },
-      { name: "works", path: "/works" },
-      { name: "contact", path: "/contact" }
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Works", path: "/works" },
+      { name: "Contact", path: "/contact" }
     ];
     return { items };
   }
@@ -36,7 +36,8 @@ export default defineComponent({
 
 <style scoped>
 ul {
-  margin: 0;
+  height: 80%;
+  margin: 20% 0 0 0;
   padding: 0;
 }
 </style>

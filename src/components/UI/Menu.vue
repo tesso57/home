@@ -19,9 +19,8 @@ export default defineComponent({
 <style scoped>
 .menu {
   height: 100%;
-  color: #3a3a3a;
   width: 286px;
-  background: #e7981c;
+  background: #eedba6;
   margin: 0;
   padding: 0;
 }
