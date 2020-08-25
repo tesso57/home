@@ -5,16 +5,16 @@
       <!--アイコンの代わり-->
     </div>
     <div class="links">
-      <img
-        @click="clickTwitter"
-        class="icon-small"
-        src="../assets/Twitter_Social_Icon_Circle_Color.svg"
-      />
-      <img
-        @click="clickGithub"
-        class="icon-small"
-        src="../assets/GitHub-Mark-120px-plus.png"
-      />
+      <a href="https://twitter.com/home">
+        <img
+          class="icon-small"
+          src="../assets/Twitter_Social_Icon_Circle_Color.svg"
+        />
+      </a>
+
+      <a href="https://github.com/tesso57">
+        <img class="icon-small" src="../assets/GitHub-Mark-120px-plus.png" />
+      </a>
     </div>
   </div>
 </template>
@@ -23,18 +23,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "home",
-  components: {},
-  setup() {
-    const clickTwitter = () => {
-      location.href = "https://twitter.com/home";
-    };
-
-    const clickGithub = () => {
-      location.href = "https://github.com/tesso57";
-    };
-    return { clickTwitter, clickGithub };
-  }
+  name: "home"
 });
 </script>
 
@@ -59,6 +48,9 @@ export default defineComponent({
   height: 100px;
   cursor: pointer;
   margin: 50px;
+}
+.icon-small:hover {
+  opacity: 0.5;
 }
 
 .links {
