@@ -6,10 +6,9 @@
       </span>
       <!--そのうち線を引く-->
     </div>
-    ここにものが来る
-    <div>
-      <!--      <img src="../assets/logo.png" />-->
-      <!--アイコンの代わり-->
+    <div class="name">
+      <img class="icon" src="../assets/tesso.jpg" />
+      <div class="tesso">TESSO</div>
     </div>
   </div>
 </template>
@@ -51,6 +50,28 @@ export default defineComponent({
   width: 120%;
   border-radius: 4px; /* 線幅の半分 */
 }
+
+.name {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 80px auto 0;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.tesso {
+  margin: auto 0 auto 0;
+  height: 100%;
+
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 22px;
+}
+
 @keyframes show {
   0% {
     opacity: 10%;
