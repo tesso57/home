@@ -1,7 +1,6 @@
 <template>
   <div class="main-content">
-    <hero msg="Works"/>
-    
+    <hero msg="Works" />
   </div>
 </template>
 
@@ -11,7 +10,7 @@ import hero from "@/components/hero.vue";
 
 export default defineComponent({
   name: "works",
-  components: {hero},
+  components: { hero },
   props: {}
 });
 </script>

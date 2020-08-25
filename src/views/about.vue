@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <hero msg="About"/>
+    <hero msg="About" />
     <div class="box name-box">
       <img class="icon" src="../assets/tesso.jpg" />
       <div class="tesso">TESSO</div>
@@ -63,12 +63,11 @@ import hero from "@/components/hero.vue";
 
 export default defineComponent({
   name: "about",
-  components: {hero},
+  components: { hero },
   props: {}
 });
 </script>
 <style scoped>
-
 .box {
   width: 50%;
   margin: 80px auto 0;

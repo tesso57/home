@@ -76,10 +76,10 @@ a {
 a:link {
   color: #3a3a3a;
 }
-a:visited{
+a:visited {
   color: #3a3a3a;
 }
-a:hover{
+a:hover {
   color: #00acee;
 }
 
@@ -101,7 +101,7 @@ a:hover{
   margin: auto 0 auto;
 }
 
-.link-box{
+.link-box {
   margin-top: 80px;
 }
 </style>
