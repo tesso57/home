@@ -6,7 +6,7 @@
     </div>
     ここにものが来る
     <div>
-      <img src="../assets/logo.png" />
+<!--      <img src="../assets/logo.png" />-->
       <!--アイコンの代わり-->
     </div>
   </div>
