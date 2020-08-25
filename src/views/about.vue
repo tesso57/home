@@ -49,19 +49,13 @@
             src="../assets/Twitter_Social_Icon_Circle_Color.svg"
         /></a>
         <a href="https://github.com/tesso57"
-          ><img
-            class="link-icon"
-            src="../assets/GitHub-Mark-120px-plus.png"
+          ><img class="link-icon" src="../assets/GitHub-Mark-120px-plus.png"
         /></a>
         <a href="https://note.com/tesso57"
-          ><img
-            class="link-icon"
-            src="../assets/logo_symbol.svg"
+          ><img class="link-icon" src="../assets/logo_symbol.svg"
         /></a>
         <a href="https://qiita.com/tesso"
-          ><img
-            class="link-icon"
-            src="../assets/qiita.png"
+          ><img class="link-icon" src="../assets/qiita.png"
         /></a>
       </div>
     </div>
