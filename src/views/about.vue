@@ -28,6 +28,7 @@ export default defineComponent({
   text-align: center;
   margin: 50px auto 0;
   display: block;
+  animation: show 1.5s forwards;
 }
 
 .title {
@@ -37,16 +38,25 @@ export default defineComponent({
   position: relative;
 }
 
-.title:after {
+.title::after {
+  transition: 1s ease-in-out;
+
   background-color: #e7981c; /* 線色 */
   content: "";
 
   position: absolute;
   bottom: -5px;
   left: -10%;
-
   height: 8px; /* 線幅 */
   width: 120%;
   border-radius: 4px; /* 線幅の半分 */
+}
+@keyframes show {
+  0% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 </style>
