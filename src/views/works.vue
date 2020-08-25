@@ -1,25 +1,16 @@
 <template>
   <div class="main-content">
-    <div>
-      <span class="title">
-        Works
-      </span>
-      <!--そのうち線を引く-->
-    </div>
-    ここにものが来る
-    <div>
-      <!--      <img src="../assets/logo.png" />-->
-      <!--アイコンの代わり-->
-    </div>
+    <hero msg="Works"></hero>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import hero from "@/components/hero.vue";
 
 export default defineComponent({
   name: "works",
-  components: {},
+  components: {hero},
   props: {}
 });
 </script>
@@ -29,26 +20,6 @@ export default defineComponent({
   margin: 50px auto 0;
   display: block;
   animation: show 1.5s forwards;
-}
-
-.title {
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 45px;
-  color: #e7981c;
-  position: relative;
-}
-
-.title:after {
-  background-color: #e7981c; /* 線色 */
-  content: "";
-
-  position: absolute;
-  bottom: -5px;
-  left: -10%;
-
-  height: 8px; /* 線幅 */
-  width: 120%;
-  border-radius: 4px; /* 線幅の半分 */
 }
 @keyframes show {
   0% {

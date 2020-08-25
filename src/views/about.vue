@@ -1,11 +1,6 @@
 <template>
   <div class="main-content">
-    <div>
-      <span class="hero">
-        About
-      </span>
-      <!--そのうち線を引く-->
-    </div>
+    <hero msg="About"/>
     <div class="box name-box">
       <img class="icon" src="../assets/tesso.jpg" />
       <div class="tesso">TESSO</div>
@@ -64,41 +59,16 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import hero from "@/components/hero.vue";
 
 export default defineComponent({
   name: "about",
-  components: {},
+  components: {hero},
   props: {}
 });
 </script>
 <style scoped>
-.main-content {
-  text-align: center;
-  margin: 50px auto 0;
-  display: block;
-  animation: show 1.5s forwards;
-}
 
-.hero {
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 45px;
-  color: #e7981c;
-  position: relative;
-}
-
-.hero::after {
-  transition: 1s ease-in-out;
-
-  background-color: #e7981c; /* 線色 */
-  content: "";
-
-  position: absolute;
-  bottom: -5px;
-  left: -10%;
-  height: 8px; /* 線幅 */
-  width: 120%;
-  border-radius: 4px; /* 線幅の半分 */
-}
 .box {
   width: 50%;
   margin: 80px auto 0;
@@ -152,6 +122,12 @@ li {
   border-radius: 50%;
 }
 
+.main-content {
+  text-align: center;
+  margin: 50px auto 0;
+  display: block;
+  animation: show 1.5s forwards;
+}
 @keyframes show {
   0% {
     opacity: 10%;

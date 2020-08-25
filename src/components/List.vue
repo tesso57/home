@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListItem from "@/components/UI/ListItem.vue";
+import ListItem from "@/components/ListItem.vue";
 
 interface Item {
   name: string;
