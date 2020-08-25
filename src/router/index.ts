@@ -14,25 +14,28 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: RouteName.HOME,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    component: () => import(/* webpackChunkName: "home" */ "@/views/home.vue"),
     props: { type: RouteName.HOME }
   },
   {
     path: "/about",
     name: RouteName.ABOUT,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    component: () =>
+      import(/* webpackChunkName: "about" */ "@/views/about.vue"),
     props: { type: RouteName.ABOUT }
   },
   {
     path: "/works",
     name: RouteName.WORKS,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    component: () =>
+      import(/* webpackChunkName: "works" */ "@/views/works.vue"),
     props: { type: RouteName.WORKS }
   },
   {
     path: "/contact",
     name: RouteName.CONTACT,
-    component: () => import(/* webpackChunkName: "Main" */ "@/views/Main.vue"),
+    component: () =>
+      import(/* webpackChunkName: "contact" */ "@/views/contact.vue"),
     props: { type: RouteName.CONTACT }
   }
 ];
