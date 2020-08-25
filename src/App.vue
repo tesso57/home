@@ -3,7 +3,11 @@
 <template>
   <div class="container">
     <Menu class="navigation" />
-    <main class="content"><router-view /></main>
+    <main class="content">
+      <transition appear>
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
@@ -52,5 +56,18 @@ body {
 
 #app {
   height: 100%;
+}
+
+.v-enter-active {
+  animation: show 1.5s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

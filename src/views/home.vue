@@ -23,7 +23,8 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "home"
+  name: "home",
+  props: {}
 });
 </script>
 
@@ -33,9 +34,7 @@ export default defineComponent({
   margin: 0 auto 0;
   display: block;
   height: 100%;
-  animation: show 1.5s forwards;
 }
-
 .icon {
   margin-top: 80px;
   border-radius: 50%;
@@ -56,14 +55,5 @@ export default defineComponent({
 
 .links {
   margin-top: 300px;
-}
-
-@keyframes show {
-  0% {
-    opacity: 10%;
-  }
-  100% {
-    opacity: 100%;
-  }
 }
 </style>
