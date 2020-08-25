@@ -1,6 +1,7 @@
 <template>
   <div class="main-content">
-    <hero msg="Contact"></hero>
+    <hero msg="Contact"/>
+
   </div>
 </template>
 

@@ -1,6 +1,7 @@
 <template>
   <div class="main-content">
-    <hero msg="Works"></hero>
+    <hero msg="Works"/>
+    
   </div>
 </template>
 
