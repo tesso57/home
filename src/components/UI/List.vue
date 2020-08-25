@@ -36,8 +36,8 @@ export default defineComponent({
 
 <style scoped>
 ul {
-  height: 80%;
-  margin: 20% 0 0 0;
+  height: 700px;
+  margin: 100px 0 0 0;
   padding: 0;
 }
 </style>

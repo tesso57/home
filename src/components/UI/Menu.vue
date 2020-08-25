@@ -18,6 +18,7 @@ export default defineComponent({
 
 <style scoped>
 .menu {
+  position: static;
   height: 100%;
   width: 286px;
   background: #eedba6;

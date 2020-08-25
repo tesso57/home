@@ -44,7 +44,6 @@ li {
 }
 .item-share {
   font-family: "Do Hyeon", sans-serif;
-  color: #3a3a3a;
   text-align: right;
 
   padding-right: 20px;

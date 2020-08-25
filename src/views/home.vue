@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <div>
+    <div class="title">
       Home
       <!--そのうち線を引く-->
     </div>
@@ -24,8 +24,11 @@ export default defineComponent({
 <style scoped>
 .main-content {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 0;
   display: block;
+}
+.title {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 34px;
 }
 </style>

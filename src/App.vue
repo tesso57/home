@@ -33,6 +33,8 @@ body {
   height: 100%;
   width: 100%;
 
+  color: #3a3a3a;
+
   grid-template-areas: "nav content";
   grid-template-columns: 286px 1fr;
 }
