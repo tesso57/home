@@ -1,7 +1,32 @@
 <template>
   <div class="main-content">
-    <hero msg="Contact"/>
-
+    <hero msg="Contact" />
+    <p class="body">連絡は、メールかtwitterまで</p>
+    <div class="link-box">
+      <ul>
+        <li>
+          <a href="#">
+            <img
+              class="icon"
+              src="../assets/Twitter_Social_Icon_Circle_Color.svg"
+            />
+          </a>
+          <a class="body" href="https://twitter.com/home"
+            >twitter : @tesso38545202</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon mail">
+              <use xlink:href="../assets/mail.svg#Capa_1"></use>
+            </svg>
+          </a>
+          <p class="body">mail : tesso57</p>
+          <img class="at" src="../assets/at.svg" />
+          <p class="body">gmail.com</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -10,7 +35,7 @@ import { defineComponent } from "vue";
 import hero from "@/components/hero.vue";
 export default defineComponent({
   name: "contact",
-  components: {hero},
+  components: { hero },
   props: {}
 });
 </script>
@@ -29,5 +54,54 @@ export default defineComponent({
   100% {
     opacity: 100%;
   }
+}
+
+.body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  margin: auto 0 auto;
+  height: auto;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  width: 50%;
+  margin: 24px auto 0;
+}
+a {
+  text-decoration: none;
+  height: 40px;
+}
+a:link {
+  color: #3a3a3a;
+}
+a:visited{
+  color: #3a3a3a;
+}
+a:hover{
+  color: #00acee;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: auto 50px auto;
+}
+
+.mail {
+  border-radius: 0;
+  fill: #e7981c;
+}
+
+.at {
+  width: 12px;
+  height: 12px;
+  margin: auto 0 auto;
+}
+
+.link-box{
+  margin-top: 80px;
 }
 </style>
