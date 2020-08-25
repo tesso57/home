@@ -5,7 +5,7 @@
       <!--アイコンの代わり-->
     </div>
     <div class="links">
-      <a href="https://twitter.com/home">
+      <a href="https://twitter.com/tesso38545202">
         <img
           class="icon-small"
           src="../assets/Twitter_Social_Icon_Circle_Color.svg"
