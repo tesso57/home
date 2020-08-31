@@ -23,6 +23,9 @@ Figma：[link](https://www.figma.com/file/KIjtjTL5GXFYjt8HNabpp9/Mypage-v1?node-
 
 ![CONTACT](design/CONTACT.png)
 
+- WORKBOX(WORKS内でWORKを選択した際に出てくる子ウィンドウ)
+
+![WORKBOX](design/WORKBOX.png)
 ## 実装言語
 
 vue 3.0
