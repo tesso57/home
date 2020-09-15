@@ -1,5 +1,4 @@
 <!--全体の整形-->
-
 <template>
   <div class="container">
     <Menu class="navigation" />

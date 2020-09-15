@@ -28,4 +28,4 @@ Figma：[link](https://www.figma.com/file/KIjtjTL5GXFYjt8HNabpp9/Mypage-v1?node-
 ![WORKBOX](design/WORKBOX.png)
 ## 実装言語
 
-vue 3.0
+vue
