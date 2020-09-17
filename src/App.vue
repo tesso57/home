@@ -23,14 +23,6 @@ export default defineComponent({
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+JP:wght@400;700&display=swap");
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
 .container {
   display: grid;
   height: 100%;
@@ -51,10 +43,6 @@ body {
   grid-area: content;
   overflow-x: hidden;
   overflow-y: scroll; /*下手な空白をいれない*/
-}
-
-#app {
-  height: 100%;
 }
 
 .v-enter-active {

@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div :class="$style.menu">
     <list />
   </div>
 </template>
@@ -16,13 +16,11 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" module>
+@import "../assets/scss/common";
 .menu {
   position: static;
-  height: 100%;
   width: 286px;
-  background: #eedba6;
-  margin: 0;
-  padding: 0;
+  background: $color-secondary;
 }
 </style>

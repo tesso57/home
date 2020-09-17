@@ -1,7 +1,11 @@
 <template>
   <li @click="onClick">
-    <div v-show="isSelected" class="item-share item-selected">{{ name }}</div>
-    <div v-show="!isSelected" class="item-share item">{{ name }}</div>
+    <div v-show="isSelected" :class="[$style.item_share, $style.item_selected]">
+      {{ name }}
+    </div>
+    <div v-show="!isSelected" :class="[$style.item_share, $style.item]">
+      {{ name }}
+    </div>
   </li>
 </template>
 
@@ -35,18 +39,15 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-li {
-  margin: 0;
-  padding-left: 76px;
-  list-style: none;
-  height: 20%;
-}
-.item-share {
+<style lang="scss" module>
+@import "../assets/scss/common";
+.item_share {
+  width: 60%;
+  margin-left: 35%;
   font-family: "Do Hyeon", sans-serif;
   text-align: right;
 
-  padding-right: 20px;
+  padding-right: 5%;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -56,16 +57,16 @@ li {
 }
 
 .item {
-  font-size: 34px;
-  color: #3a3a3a;
+  font-size: $fontsize-Display1;
 }
-.item-selected {
-  font-size: 45px;
-  background: #e7981c;
+
+.item_selected {
+  font-size: $fontsize-Display2;
+  background: $color-primary;
 }
+
 .item:hover {
-  background: #b39f78;
-  font-size: 45px;
-  //padding-right: 40px;
+  background: $color-hoverBackground;
+  font-size: $fontsize-Display2;
 }
 </style>

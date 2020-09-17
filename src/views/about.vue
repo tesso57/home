@@ -97,12 +97,6 @@ export default defineComponent({
   font-size: 22px;
 }
 
-.body {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  text-align: left;
-}
-
 li {
   list-style: none;
   margin-top: 8px;

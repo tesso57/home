@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="hero">
+    <span :class="$style.hero">
       {{ msg }}
     </span>
   </div>
@@ -16,18 +16,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" module>
+@import "../assets/scss/common";
 .hero {
   font-family: "Do Hyeon", sans-serif;
-  font-size: 45px;
-  color: #e7981c;
+  font-size: $fontsize-hero;
+  color: $color-primary;
   position: relative;
 }
 
 .hero::after {
-  transition: 1s ease-in-out;
-
-  background-color: #e7981c; /* 線色 */
+  background-color: $color-primary; /* 線色 */
   content: "";
 
   position: absolute;

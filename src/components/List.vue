@@ -33,11 +33,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-ul {
-  height: 700px;
-  margin: 100px 0 0 0;
-  padding: 0;
-}
-</style>
