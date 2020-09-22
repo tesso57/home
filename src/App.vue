@@ -23,7 +23,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" module>
-@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+JP:wght@400;700&display=swap");
 @import "assets/scss/common";
 .container {
   display: grid;
