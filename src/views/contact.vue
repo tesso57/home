@@ -5,22 +5,20 @@
     <div class="link-box">
       <ul>
         <li>
-          <a href="#">
+          <a href="https://twitter.com/tesso38545202">
             <img
               class="icon"
               src="../assets/Twitter_Social_Icon_Circle_Color.svg"
             />
           </a>
-          <a class="body" href="https://twitter.com/home"
+          <a class="body" href="https://twitter.com/tesso38545202"
             >twitter : @tesso38545202</a
           >
         </li>
         <li>
-          <a href="#">
             <svg class="icon mail">
               <use xlink:href="../assets/mail.svg#Capa_1"></use>
             </svg>
-          </a>
           <p class="body">mail : tesso1729</p>
           <img class="at" src="../assets/at.svg" />
           <p class="body">gmail.com</p>
