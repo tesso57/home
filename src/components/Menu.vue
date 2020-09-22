@@ -1,11 +1,11 @@
 <template>
-  <nav :class="$style.menu">
+  <nav :class="$style.menu" :width="width">
     <list :class="$style.list"/>
   </nav>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script lang="ts">
+import {defineComponent} from "vue";
 import List from "./List";
 
 export default defineComponent({
@@ -18,10 +18,11 @@ export default defineComponent({
 
 <style lang="scss" module>
 @import "../assets/scss/common";
+
 .menu {
-  width: 286px;
   background: $color-secondary;
 }
+
 .list {
   margin-top: 20%;
 }

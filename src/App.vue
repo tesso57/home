@@ -1,29 +1,40 @@
 <!--全体の整形-->
 <template>
-  <div :class="$style.container">
-    <Menu :class="$style.navigation" />
+  <div :class="$style.container" :width="width">
+    <Menu :class="$style.navigation"/>
     <main :class="$style.content">
       <transition appear>
-        <router-view />
+        <router-view/>
       </transition>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent, onBeforeUnmount, onMounted, ref, computed} from "vue";
 import Menu from "@/components/Menu.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     Menu
+  },
+  setup() {
+    const width = ref<boolean>(window.innerWidth < 950);
+    const handleResize = () => {
+      width.value = window.innerWidth < 950;
+      console.log(width.value)
+    }
+    onMounted(() => window.addEventListener('resize', handleResize))
+    onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
+    return {width};
   }
 });
 </script>
 
 <style lang="scss" module>
 @import "assets/scss/common";
+
 .container {
   display: grid;
   height: 100%;
@@ -32,12 +43,20 @@ export default defineComponent({
 
   grid-template-areas: "nav content";
   grid-template-columns: 286px 1fr;
+
+  &[width='true'] {
+    grid-template-areas: "content";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
 }
 
 .navigation {
   grid-area: nav;
   overflow-y: hidden;
   overflow-x: hidden;
+
+
 }
 
 .content {
