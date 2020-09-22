@@ -1,17 +1,17 @@
 <!--全体の整形-->
 <template>
   <div :class="$style.container">
-    <Menu :class="$style.navigation"/>
+    <Menu :class="$style.navigation" />
     <main :class="$style.content">
       <transition appear>
-        <router-view/>
+        <router-view />
       </transition>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
 import Menu from "@/components/Menu.vue";
 
 export default defineComponent({
