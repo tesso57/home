@@ -1,18 +1,19 @@
 <!--全体の整形-->
 <template>
-  <div class="container">
-    <Menu class="navigation" />
-    <main class="content">
+  <div :class="$style.container">
+    <Menu :class="$style.navigation"/>
+    <main :class="$style.content">
       <transition appear>
-        <router-view />
+        <router-view/>
       </transition>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import {defineComponent} from "vue";
 import Menu from "@/components/Menu.vue";
+
 export default defineComponent({
   name: "App",
   components: {
@@ -21,14 +22,14 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss" module>
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+JP:wght@400;700&display=swap");
+@import "assets/scss/common";
 .container {
   display: grid;
   height: 100%;
   width: 100%;
-
-  color: #3a3a3a;
+  color: $color-font;
 
   grid-template-areas: "nav content";
   grid-template-columns: 286px 1fr;
@@ -36,13 +37,14 @@ export default defineComponent({
 
 .navigation {
   grid-area: nav;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .content {
-  height: 100%;
   grid-area: content;
   overflow-x: hidden;
-  overflow-y: scroll; /*下手な空白をいれない*/
+  overflow-y: scroll;
 }
 
 .v-enter-active {

@@ -1,7 +1,7 @@
 <template>
-  <div :class="$style.menu">
-    <list />
-  </div>
+  <nav :class="$style.menu">
+    <list :class="$style.list"/>
+  </nav>
 </template>
 
 <script>
@@ -19,8 +19,10 @@ export default defineComponent({
 <style lang="scss" module>
 @import "../assets/scss/common";
 .menu {
-  position: static;
   width: 286px;
   background: $color-secondary;
+}
+.list {
+  margin-top: 20%;
 }
 </style>
