@@ -54,8 +54,7 @@ export default defineComponent({
 
 .navigation {
   grid-area: nav;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content {
