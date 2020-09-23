@@ -1,38 +1,40 @@
 <!--全体の整形-->
 <template>
-  <div :class="$style.container" :width="width">
-    <Menu :class="$style.navigation"/>
-    <main :class="$style.content">
+  <div class="container" :width="width">
+    <Menu class="navigation" />
+    <main class="content">
+      <HamburgerMenu v-show="width" />
       <transition appear>
-        <router-view/>
+        <router-view />
       </transition>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, onBeforeUnmount, onMounted, ref, computed} from "vue";
+import { defineComponent, onBeforeUnmount, onMounted, ref } from "vue";
 import Menu from "@/components/Menu.vue";
+import HamburgerMenu from "@/components/HamburgerMenu.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    Menu
+    Menu,
+    HamburgerMenu
   },
   setup() {
     const width = ref<boolean>(window.innerWidth < 950);
     const handleResize = () => {
       width.value = window.innerWidth < 950;
-      console.log(width.value)
-    }
-    onMounted(() => window.addEventListener('resize', handleResize))
-    onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
-    return {width};
+    };
+    onMounted(() => window.addEventListener("resize", handleResize));
+    onBeforeUnmount(() => window.removeEventListener("resize", handleResize));
+    return { width };
   }
 });
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import "assets/scss/common";
 
 .container {
@@ -40,11 +42,10 @@ export default defineComponent({
   height: 100%;
   width: 100%;
   color: $color-font;
-
   grid-template-areas: "nav content";
   grid-template-columns: 286px 1fr;
 
-  &[width='true'] {
+  &[width="true"] {
     grid-template-areas: "content";
     grid-template-columns: 100%;
     grid-template-rows: 100%;
@@ -55,8 +56,6 @@ export default defineComponent({
   grid-area: nav;
   overflow-y: hidden;
   overflow-x: hidden;
-
-
 }
 
 .content {

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import List from "./List";
+import List from "./List.vue";
 
 export default defineComponent({
   name: "Menu",
@@ -21,9 +21,12 @@ export default defineComponent({
 
 .menu {
   background: $color-secondary;
+  height: 100%;
+  width: 100%;
+  box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
 }
 
 .list {
-  margin-top: 20%;
+  padding-top: 20%;
 }
 </style>
