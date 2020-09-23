@@ -41,6 +41,7 @@ export default defineComponent({
   display: grid;
   height: 100%;
   width: 100%;
+  min-width: 300px;
   color: $color-font;
   grid-template-areas: "nav content";
   grid-template-columns: 286px 1fr;
