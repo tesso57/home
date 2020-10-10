@@ -17,7 +17,6 @@ export default defineComponent({
     alt: {
       type: String,
     }
-
   }
 })
 </script>

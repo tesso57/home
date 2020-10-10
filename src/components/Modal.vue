@@ -4,7 +4,7 @@
       <div class="modal-window">
         <div class="modal-content">
           <div class="modal-body">
-            <img class="img" src="/img/HOME.png" :alt=alt>
+            <img class="img" :src="src" :alt=alt>
           </div>
           <div class="modal-footer">
             <div class="modal-title">

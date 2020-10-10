@@ -24,7 +24,7 @@ interface Item {
   name: string;
   date: string;
   url: string;
-  src: string;
+  src: any;
   alt: string;
 }
 
@@ -40,7 +40,7 @@ export default defineComponent({
         name: "自己紹介サイト",
         date: "2020/10/10",
         url: "https://github.com/tesso57/home",
-        src: "/img/HOME.png",
+        src: require("@/assets/HOME.png"),
         alt: "自己紹介サイト"
       }
     ];
