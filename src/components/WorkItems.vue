@@ -12,7 +12,7 @@
          :src="items[0].src"
          :alt="items[0].alt"
          @close="closeModal"
-         v-if="modal"/>
+         v-show="modal"/>
 </template>
 
 <script lang="ts">

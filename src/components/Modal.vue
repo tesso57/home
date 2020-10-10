@@ -1,5 +1,5 @@
 <template>
-  <transition>
+  <transition name="modal" appear>
     <div class="modal-overlay" @click.self="$emit('close')">
       <div class="modal-window">
         <div class="modal-content">
@@ -129,5 +129,26 @@ export default defineComponent({
   height: inherit;
   object-fit: cover;
   border-bottom: 2px solid black;
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity 0.4s;
+
+  .modal-window {
+    transition: opacity 0.4s, transform 0.4s;
+  }
+}
+
+.modal-leave-active {
+  transition: opacity 0.6s ease 0.4s;
+}
+
+.modal-enter, .modal-leave-to {
+  opacity: 0;
+
+  .modal-window {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 </style>
