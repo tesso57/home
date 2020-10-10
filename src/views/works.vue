@@ -1,35 +1,20 @@
 <template>
   <div class="main-content">
     <hero msg="Works"/>
-    <button @click="openModal"> ここを押すとモーダルウィンドウが現れる</button>
-    <Modal @close="closeModal" v-if="modal"/>
+    <WorkItems/>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent, ref} from "vue";
 import hero from "@/components/hero.vue";
-import Modal from "@/components/Modal.vue";
-
-
-type Props = {}
+import WorkItems from "@/components/WorkItems.vue";
 
 export default defineComponent({
   name: "works",
   components: {
     hero,
-    Modal
-  },
-  props: {},
-  setup(props: Props) {
-    const modal = ref<boolean>(false);
-    const openModal = () => {
-      modal.value = true;
-    }
-    const closeModal = () => {
-      modal.value = false;
-    }
-    return {openModal, closeModal, modal}
+    WorkItems
   }
 });
 </script>

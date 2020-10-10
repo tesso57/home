@@ -4,18 +4,17 @@
       <div class="modal-window">
         <div class="modal-content">
           <div class="modal-body">
-            <img class="img" src="../assets/works/HOME.png" alt="画像"/>
+            <img class="img" src="/img/HOME.png" :alt=alt>
           </div>
           <div class="modal-footer">
             <div class="modal-title">
-              自己紹介ページ
+              {{ name }}
             </div>
             <div class="modal-date">
-              2020/10/10
+              {{ date }}
             </div>
             <div class="modal-links">
-              <a href="#"><img class="modal-icon" src="../assets/logo_symbol.svg" alt="note"/></a>
-              <a href="#"><img class="modal-icon" src="../assets/GitHub-Mark-120px-plus.png" alt="github"/></a>
+              <a :href="url"><img class="modal-icon" src="../assets/GitHub-Mark-120px-plus.png" alt="github"/></a>
             </div>
           </div>
         </div>
@@ -27,9 +26,29 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 
-
 export default defineComponent({
-  name: "Modal"
+  name: "Modal",
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    date: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
+    },
+    src: {
+      type: String,
+      required: true
+    },
+    alt: {
+      type: String,
+    },
+  }
 })
 
 </script>
