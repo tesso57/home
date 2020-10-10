@@ -2,14 +2,7 @@
   <div class="main-content">
     <hero msg="Works"/>
     <button @click="openModal"> ここを押すとモーダルウィンドウが現れる</button>
-    <Modal @close="closeModal" v-if="modal">
-      <template v-slot:body>
-        <p>Vue.js Modal Window</p>
-      </template>
-      <template v-slot:footer>
-        <p>footer</p>
-      </template>
-    </Modal>
+    <Modal @close="closeModal" v-if="modal"/>
   </div>
 </template>
 
@@ -19,8 +12,7 @@ import hero from "@/components/hero.vue";
 import Modal from "@/components/Modal.vue";
 
 
-type Props = {
-}
+type Props = {}
 
 export default defineComponent({
   name: "works",
@@ -28,8 +20,7 @@ export default defineComponent({
     hero,
     Modal
   },
-  props: {
-  },
+  props: {},
   setup(props: Props) {
     const modal = ref<boolean>(false);
     const openModal = () => {
@@ -38,14 +29,16 @@ export default defineComponent({
     const closeModal = () => {
       modal.value = false;
     }
-    return {openModal,closeModal,modal}
+    return {openModal, closeModal, modal}
   }
 });
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .main-content {
   text-align: center;
   margin: 50px auto 0;
   display: block;
 }
+
+
 </style>
