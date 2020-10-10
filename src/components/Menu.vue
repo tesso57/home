@@ -11,7 +11,7 @@ import List from "./List.vue";
 export default defineComponent({
   name: "Menu",
   components: {
-    List
+    List,
   }
 });
 </script>
