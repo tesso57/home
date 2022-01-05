@@ -24,7 +24,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "home",
-  props: {}
+  props: {},
 });
 </script>
 

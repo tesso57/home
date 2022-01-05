@@ -20,7 +20,7 @@ export default defineComponent({
   name: "App",
   components: {
     Menu,
-    HamburgerMenu
+    HamburgerMenu,
   },
   setup() {
     const width = ref<boolean>(window.innerWidth < 950);
@@ -30,7 +30,7 @@ export default defineComponent({
     onMounted(() => window.addEventListener("resize", handleResize));
     onBeforeUnmount(() => window.removeEventListener("resize", handleResize));
     return { width };
-  }
+  },
 });
 </script>
 

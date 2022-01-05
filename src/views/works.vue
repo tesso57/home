@@ -1,12 +1,12 @@
 <template>
   <div class="main-content">
-    <hero msg="Works"/>
-    <WorkItems/>
+    <hero msg="Works" />
+    <WorkItems />
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from "vue";
+import { defineComponent, ref } from "vue";
 import hero from "@/components/hero.vue";
 import WorkItems from "@/components/WorkItems.vue";
 
@@ -14,8 +14,8 @@ export default defineComponent({
   name: "works",
   components: {
     hero,
-    WorkItems
-  }
+    WorkItems,
+  },
 });
 </script>
 <style lang="scss" scoped>
@@ -24,6 +24,4 @@ export default defineComponent({
   margin: 50px auto 0;
   display: block;
 }
-
-
 </style>

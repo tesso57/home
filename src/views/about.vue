@@ -6,20 +6,12 @@
       <div class="tesso">TESSO</div>
     </div>
     <div class="box">
-      <div class="title">
-        Profile
-      </div>
+      <div class="title">Profile</div>
       <div class="body">
         <ul>
-          <li>
-            ハンドルネーム：TESSO(てっそ)
-          </li>
-          <li>
-            誕生日：2001/09/12
-          </li>
-          <li>
-            学歴：大学1年生
-          </li>
+          <li>ハンドルネーム：TESSO(てっそ)</li>
+          <li>誕生日：2001/09/12</li>
+          <li>学歴：大学2年生</li>
         </ul>
       </div>
     </div>
@@ -35,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="box ">
+    <div class="box">
       <div class="title">Links</div>
       <div class="links-box">
         <a href="https://twitter.com/tesso38545202"
@@ -64,7 +56,7 @@ import hero from "@/components/hero.vue";
 export default defineComponent({
   name: "about",
   components: { hero },
-  props: {}
+  props: {},
 });
 </script>
 <style scoped>

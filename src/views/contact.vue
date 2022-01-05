@@ -1,18 +1,18 @@
 <template>
   <div class="main-content">
-    <hero msg="Contact"/>
+    <hero msg="Contact" />
     <p class="body">連絡は、メールかtwitterまで</p>
     <div class="link-box">
       <ul>
         <li>
           <a href="https://twitter.com/tesso38545202">
             <img
-                class="icon"
-                src="../assets/Twitter_Social_Icon_Circle_Color.svg"
+              class="icon"
+              src="../assets/Twitter_Social_Icon_Circle_Color.svg"
             />
           </a>
           <a class="body" href="https://twitter.com/tesso38545202"
-          >twitter : @tesso38545202</a
+            >twitter : @tesso38545202</a
           >
         </li>
         <li>
@@ -20,7 +20,7 @@
             <use xlink:href="../assets/mail.svg#Capa_1"></use>
           </svg>
           <p class="body">mail : tesso1729</p>
-          <img class="at" src="../assets/at.svg"/>
+          <img class="at" src="../assets/at.svg" />
           <p class="body">gmail.com</p>
         </li>
       </ul>
@@ -29,13 +29,13 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
 import hero from "@/components/hero.vue";
 
 export default defineComponent({
   name: "contact",
-  components: {hero},
-  props: {}
+  components: { hero },
+  props: {},
 });
 </script>
 <style lang="scss" scoped>
